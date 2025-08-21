@@ -11,63 +11,77 @@ import { Button } from "@/components/ui/button";
 // Sample data
 const featuredPosts = [
   {
-    title: "The Evolution of Pixel Art in Modern Web Design",
-    excerpt: "Exploring how pixel art has found its place in contemporary web design and why it remains a popular stylistic choice.",
-    slug: "evolution-pixel-art-web-design",
-    date: new Date("2023-04-15"),
-    imageUrl: "https://images.pexels.com/photos/2749481/pexels-photo-2749481.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    readTime: 7
+    title: "The Rise of JAMstack Architecture in Modern Web Development",
+    excerpt:
+      "Explores the modern architectural approach revolutionizing web development.",
+    slug: "rise-of-JAMstack-architecture",
+    date: new Date("2023-05-12"),
+    imageUrl:
+      "https://codeneos.com/public/assets/images/blog/blogimage_1721641897.jpg",
+    readTime: 6,
   },
   {
-    title: "Creating Responsive Pixel Art Designs",
-    excerpt: "Learn the techniques to maintain pixel art aesthetics across different screen sizes while ensuring your designs remain responsive.",
-    slug: "responsive-pixel-art-designs",
-    date: new Date("2023-05-22"),
-    imageUrl: "https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    readTime: 5
+    title: "The JavaScript Framework Wars: Choosing the Right Tool in 2023",
+    excerpt: "Helps navigate the complex landscape of JS frameworks.",
+    slug: "javaScript-framework-wars",
+    date: new Date("2023-07-03"),
+    imageUrl:
+      "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*iDHzfkfNGB-_fwbkPfZhZg.png",
+    readTime: 7,
   },
   {
-    title: "The Psychology of Color in Pixel Art",
-    excerpt: "How limited color palettes can evoke powerful emotions and create memorable experiences in pixel art designs.",
-    slug: "psychology-color-pixel-art",
-    date: new Date("2023-06-10"),
-    imageUrl: "https://images.pexels.com/photos/1910225/pexels-photo-1910225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    readTime: 6
-  }
+    title: "Full-Stack Development: Bridging Frontend and Backend Expertise",
+    excerpt: "Discusses the bridging of frontend and backend expertise.",
+    slug: "full-stack-development",
+    date: new Date("2023-08-15"),
+    imageUrl:
+      "https://www.launchidea.in/_next/image?url=https%3A%2F%2Fadmin.launchidea.in%2Ftemp-file%2Fc4da58150c354d34689b2b80d8ca238e35e020fd84bb0567253615701e9fa190%3Ffilename%3D1741691261White%252Band%252BBlue%252BProfessional%252BModern%252BTechnology%252BPitch%252BDeck%252BPresentation%252B%2525282%252529.webp&w=1920&q=75",
+    readTime: 9,
+  },
 ];
 
 const featuredWorks = [
   {
-    title: "Pixel Arcade",
-    description: "A retro-inspired game collection with modern gameplay mechanics.",
-    slug: "pixel-arcade",
-    imageUrl: "https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["Game Design", "Pixel Art", "JavaScript"]
+    title: "Hospital Management System",
+    description:
+      "A comprehensive healthcare management solution for digitizing hospital operations.",
+    slug: "hospital-management-system",
+    imageUrl:
+      "https://media.geeksforgeeks.org/wp-content/uploads/20240314153915/Hospital--management-system-project-team.webp",
+    tags: [
+      "Full-Stack",
+      "Healthcare",
+      "Management System",
+      ".NET Core & API",
+      "Database",
+    ],
   },
   {
-    title: "Burger Bytes",
-    description: "A fast-food ordering system with a delightful pixel art interface.",
-    slug: "burger-bytes",
-    imageUrl: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["UI/UX", "React", "Ecommerce"]
-  }
+    title: "IBSRA StoreHub",
+    description:
+      "A retail management system for store operations and inventory.",
+    slug: "ibsra-storeHub",
+    imageUrl:
+      "https://www.appverticals.com/blog/wp-content/uploads/2021/09/Payment-Gateway.jpg",
+    tags: ["Full-Stack", "E-commerce", "React", ".NET Core & API", "Business"],
+  },
 ];
 
 export default function Home() {
   return (
     <div className="pixel-grid min-h-screen">
       <PixelHero />
-      
+
       <PixelSeparator />
-      
+
       <AboutSection />
-      
+
       <PixelSeparator />
-      
+
       <ServicesSection />
-      
+
       <PixelSeparator />
-      
+
       {/* Featured Works Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="flex justify-between items-center mb-12">
@@ -79,7 +93,7 @@ export default function Home() {
             </Link>
           </Button>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {featuredWorks.map((work, index) => (
             <WorksCard
@@ -94,9 +108,9 @@ export default function Home() {
           ))}
         </div>
       </section>
-      
+
       <PixelSeparator />
-      
+
       {/* Blog Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="flex justify-between items-center mb-12">
@@ -108,7 +122,7 @@ export default function Home() {
             </Link>
           </Button>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {featuredPosts.map((post, index) => (
             <BlogCard
