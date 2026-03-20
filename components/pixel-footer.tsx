@@ -20,7 +20,6 @@ export function PixelFooter() {
     { name: "Blog", href: "/blog" },
     { name: "Works", href: "/works" },
     { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
   ];
 
   return (
