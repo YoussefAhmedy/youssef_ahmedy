@@ -39,7 +39,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 gap-4">
             <div className="relative h-48 pixel-card overflow-hidden">
               <Image
-                src="https://i.pinimg.com/1200x/ac/1e/8c/ac1e8cab799579ec33e604fb3540387a.jpg"
+                src="https://res.cloudinary.com/dkh59ytfc/image/upload/v1774016103/Gemini_Generated_Image_communication_wsval7.png"
                 alt="Working on designs"
                 fill
                 className="object-cover"
@@ -49,7 +49,7 @@ export default function AboutPage() {
             
             <div className="relative h-48 pixel-card overflow-hidden">
               <Image
-                src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src="https://res.cloudinary.com/dkh59ytfc/image/upload/v1774016103/Gemini_Generated_Image_Network_hurka7.png"
                 alt="Coding session"
                 fill
                 className="object-cover"
@@ -59,7 +59,7 @@ export default function AboutPage() {
             
             <div className="relative h-48 pixel-card overflow-hidden">
               <Image
-                src="https://images.pexels.com/photos/5935794/pexels-photo-5935794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src="https://res.cloudinary.com/dkh59ytfc/image/upload/v1774016145/Gemini_Generated_Image_software2_o8fvgr.png"
                 alt="Design workshop"
                 fill
                 className="object-cover"
@@ -69,7 +69,7 @@ export default function AboutPage() {
             
             <div className="relative h-48 pixel-card overflow-hidden">
               <Image
-                src="https://images.pexels.com/photos/7014337/pexels-photo-7014337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src="https://res.cloudinary.com/dkh59ytfc/image/upload/v1774016892/Gemini_Generated_Image_Electronic3_jlivzq.png"
                 alt="Speaking at conference"
                 fill
                 className="object-cover"

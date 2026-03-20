@@ -76,7 +76,7 @@ export function PixelHero() {
             <div className="absolute inset-4 border-4 border-black bg-primary/20 z-0"></div>
             <div className="absolute inset-0 pixel-card overflow-hidden">
               <Image
-                src="https://images.pexels.com/photos/2103864/pexels-photo-2103864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src="https://res.cloudinary.com/dkh59ytfc/image/upload/v1774014788/Gemini_Generated_Image_sss_j66j3g.png"
                 alt="Pixel Art Portfolio"
                 fill
                 className="object-cover"

@@ -25,7 +25,7 @@ const blogPosts = {
       The future of JAMstack looks bright as more teams adopt this architecture for everything from simple blogs to complex enterprise applications.
     `,
     date: new Date("2023-05-12"),
-    imageUrl: "https://codeneos.com/public/assets/images/blog/blogimage_1721641897.jpg",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/f_auto,q_auto/Gemini_Generated_Image_1_mrmu9b",
     readTime: 6
   },
    "evolution-of-CSS": {
@@ -47,7 +47,7 @@ const blogPosts = {
       Looking ahead, CSS continues to evolve with new features like cascade layers and advanced color functions, making it more powerful than ever.
     `,
     date: new Date("2023-06-08"),
-    imageUrl: "https://media.licdn.com/dms/image/v2/D4E12AQHhsXdAyoX7aA/article-cover_image-shrink_720_1280/B4EZZTkZwmHMAI-/0/1745158864388?e=1761177600&v=beta&t=-VtGpau42us20uTRCoDeA-lyOyzgpfhjsJi_LKUGM1M",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/f_auto,q_auto/Gemini_Generated_Image_2_seyddh",
     readTime: 8
   },
    "javaScript-framework-wars": {
@@ -69,7 +69,7 @@ const blogPosts = {
       The key is understanding that there's no one-size-fits-all solution. Each framework excels in different scenarios, and the best choice depends on your specific context and goals.
     `,
     date: new Date("2023-07-03"),
-    imageUrl: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*iDHzfkfNGB-_fwbkPfZhZg.png",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774012185/Gemini_Generated_Image_3_ugc5zg.png",
     readTime: 7
   },
    "full-stack-development": {
@@ -91,7 +91,7 @@ const blogPosts = {
       The future favors developers who can think across the entire stack while maintaining depth in their areas of expertise. This hybrid approach leads to more cohesive and efficient web applications.
     `,
     date: new Date("2023-08-15"),
-    imageUrl: "https://www.launchidea.in/_next/image?url=https%3A%2F%2Fadmin.launchidea.in%2Ftemp-file%2Fc4da58150c354d34689b2b80d8ca238e35e020fd84bb0567253615701e9fa190%3Ffilename%3D1741691261White%252Band%252BBlue%252BProfessional%252BModern%252BTechnology%252BPitch%252BDeck%252BPresentation%252B%2525282%252529.webp&w=1920&q=75",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774013571/Gemini_Generated_Image_4_ov7bwo.png",
     readTime: 9
   },
    "mobile-first-revolution": {
@@ -113,7 +113,7 @@ const blogPosts = {
       The future of pixel art in web design looks promising as more designers discover ways to incorporate this style into modern projects.
     `,
     date: new Date("2023-09-22"),
-    imageUrl: "https://www.finbar.co.za/wp-content/uploads/2023/09/Responsive-Web-Design-The-Importance-of.png.webp",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774013687/Gemini_Generated_Image_5_pj1ew5.png",
     readTime: 6
   },
   "web-performance-optimization": {
@@ -135,7 +135,7 @@ const blogPosts = {
       As devices continue to diversify, mobile-first thinking ensures our applications remain accessible and usable regardless of screen size or input method.
     `,
     date: new Date("2023-10-18"),
-    imageUrl: "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2025/03/Horizons_tutorials-2-1-1536x864.png",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774013953/Gemini_Generated_Image_6_ohm1cr.png",
     readTime: 8
   }
 };

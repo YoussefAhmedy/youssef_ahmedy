@@ -31,7 +31,7 @@ const works = {
       - Responsive design for desktop and mobile
       - Data validation for medical information integrity
     `,
-    imageUrl: "https://media.geeksforgeeks.org/wp-content/uploads/20240314153915/Hospital--management-system-project-team.webp",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774013741/Gemini_Generated_Image_A1_fkjfs9.png",
     tags: ["Full-Stack", "Healthcare", "Management System", ".NET Core & API", "Database"],
     link: "https://github.com/YoussefAhmedy/HospitalManagement"
   },
@@ -60,7 +60,7 @@ const works = {
       - Payment gateway integration
       - Responsive design for cross-platform compatibility
     `,
-    imageUrl: "https://www.appverticals.com/blog/wp-content/uploads/2021/09/Payment-Gateway.jpg",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774014149/Gemini_Generated_Image_B_gtgluz.png",
     tags: ["Full-Stack", "E-commerce", "React", ".NET Core & API", "Business"],
     link: "https://github.com/YoussefAhmedy/IBSRA-StoreHub"
   },
@@ -96,7 +96,7 @@ const works = {
       - Memory Caching - Performance optimization
       - Rate Limiting - API protection and throttling
     `,
-    imageUrl: "https://www.portotheme.com/wp-content/uploads/2023/10/ecommerce_-pos_-integration-2048x1448.jpg",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774014198/Gemini_Generated_Image_C1_kfyhqv.png",
     tags: ["Back-End", "E-commerce", ".NET Core & API", "Custom Printing"],
     link: "https://github.com/YoussefAhmedy/IBSRA-E.commerceHub"
   },
@@ -125,7 +125,7 @@ const works = {
       - Video streaming for educational content
       - Responsive design for mobile learning
     `,
-    imageUrl: "https://tse1.mm.bing.net/th/id/OIP.5UR1gZMzwVIBER5U-OumOQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774014251/Gemini_Generated_Image_D_aneamo.png",
     tags: ["Full-Stack", "Mobile Development", "Education", ".NET Core & API"],
     link: "https://github.com/YoussefAhmedy/learnfy"
   },
@@ -154,7 +154,7 @@ const works = {
       - Animation libraries for smooth transitions
       - Optimized performance for fast loading
     `,
-    imageUrl: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/9cb4f6190639649.65be1214bc755.jpg",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774014271/Gemini_Generated_Image_E1_xxwjn2.png",
     tags: ["Full-Stack", "React", "TypeScript", "Web Design", "UI/UX", "Node.js"],
     link: "https://github.com/YoussefAhmedy/New.Portfolio"
   },
@@ -183,7 +183,7 @@ const works = {
       - Stripe/PayPal for payment processing
       - Responsive design for mobile shopping
     `,
-    imageUrl: "https://raw.githubusercontent.com/shabrina12/FullStack-Ecommerce-Clothing-Web/main/src/assets/header-section.png",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774014391/Gemini_Generated_Image_F1_gzgkzf.png",
     tags: ["Full-Stack", "E-commerce", "React", "UI/UX", ".NET Core & API"],
     link: "https://github.com/YoussefAhmedy/Build-a-Full-Stack-Website-for-a-Clothing-Brand"
   }

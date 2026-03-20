@@ -28,7 +28,7 @@ export function AboutSection() {
             <div className="absolute inset-4 border-4 border-primary z-0"></div>
             <div className="absolute inset-0 pixel-card overflow-hidden">
               <Image
-                src="https://image2url.com/images/1755442273533-bd5278e1-c5d3-4cba-9b03-5265285bc2be.jpg"
+                src="https://res.cloudinary.com/dkh59ytfc/image/upload/v1774024068/Gemini_Generated_Image_Abo_zis2ag.png"
                 alt="Developer portrait"
                 fill
                 className="object-cover"

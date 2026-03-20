@@ -8,7 +8,7 @@ const blogPosts = [
     excerpt: "Explores the modern architectural approach revolutionizing web development.",
     slug: "rise-of-JAMstack-architecture",
     date: new Date("2023-05-12"),
-    imageUrl: "https://codeneos.com/public/assets/images/blog/blogimage_1721641897.jpg",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/f_auto,q_auto/Gemini_Generated_Image_1_mrmu9b",
     readTime: 6
   },
   {
@@ -16,7 +16,7 @@ const blogPosts = [
     excerpt: "Traces CSS from simple stylesheets to powerful component systems.",
     slug: "evolution-of-CSS",
     date: new Date("2023-06-08"),
-    imageUrl: "https://media.licdn.com/dms/image/v2/D4E12AQHhsXdAyoX7aA/article-cover_image-shrink_720_1280/B4EZZTkZwmHMAI-/0/1745158864388?e=1761177600&v=beta&t=-VtGpau42us20uTRCoDeA-lyOyzgpfhjsJi_LKUGM1M",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/f_auto,q_auto/Gemini_Generated_Image_2_seyddh",
     readTime: 8
   },
   {
@@ -24,7 +24,7 @@ const blogPosts = [
     excerpt: "Helps navigate the complex landscape of JS frameworks.",
     slug: "javaScript-framework-wars",
     date: new Date("2023-07-03"),
-    imageUrl: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*iDHzfkfNGB-_fwbkPfZhZg.png",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774012185/Gemini_Generated_Image_3_ugc5zg.png",
     readTime: 7
   },
   {
@@ -32,7 +32,7 @@ const blogPosts = [
     excerpt: "Discusses the bridging of frontend and backend expertise.",
     slug: "full-stack-development",
     date: new Date("2023-08-15"),
-    imageUrl: "https://www.launchidea.in/_next/image?url=https%3A%2F%2Fadmin.launchidea.in%2Ftemp-file%2Fc4da58150c354d34689b2b80d8ca238e35e020fd84bb0567253615701e9fa190%3Ffilename%3D1741691261White%252Band%252BBlue%252BProfessional%252BModern%252BTechnology%252BPitch%252BDeck%252BPresentation%252B%2525282%252529.webp&w=1920&q=75",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774013571/Gemini_Generated_Image_4_ov7bwo.png",
     readTime: 9
   },
   {
@@ -40,7 +40,7 @@ const blogPosts = [
     excerpt: "Covers responsive design in the modern era.",
     slug: "mobile-first-revolution",
     date: new Date("2023-09-22"),
-    imageUrl: "https://www.finbar.co.za/wp-content/uploads/2023/09/Responsive-Web-Design-The-Importance-of.png.webp",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774013687/Gemini_Generated_Image_5_pj1ew5.png",
     readTime: 6
   },
   {
@@ -48,7 +48,7 @@ const blogPosts = [
     excerpt: "Focuses on building lightning-fast applications.",
     slug: "web-performance-optimization",
     date: new Date("2023-10-18"),
-    imageUrl: "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2025/03/Horizons_tutorials-2-1-1536x864.png",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774013953/Gemini_Generated_Image_6_ohm1cr.png",
     readTime: 8
   }
 ];

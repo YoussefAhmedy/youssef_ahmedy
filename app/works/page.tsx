@@ -7,42 +7,42 @@ const works = [
     title: "Hospital Management System",
     description: "A comprehensive healthcare management solution for digitizing hospital operations.",
     slug: "hospital-management-system",
-    imageUrl: "https://media.geeksforgeeks.org/wp-content/uploads/20240314153915/Hospital--management-system-project-team.webp",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774013741/Gemini_Generated_Image_A1_fkjfs9.png",
     tags: ["Full-Stack", "Healthcare", "Management System", ".NET Core & API", "Database"]
-  },
-  {
-    title: "IBSRA StoreHub",
-    description: "A retail management system for store operations and inventory.",
-    slug: "ibsra-storeHub",
-    imageUrl: "https://www.appverticals.com/blog/wp-content/uploads/2021/09/Payment-Gateway.jpg",
-    tags: ["Full-Stack", "E-commerce", "React", ".NET Core & API", "Business"]
-  },
-  {
-    title: "IBSRA E-commerceHub",
-    description: "A sophisticated custom poster printing platform with full e-commerce capabilities.",
-    slug: "ibsra-e-commerceHub",
-    imageUrl: "https://www.portotheme.com/wp-content/uploads/2023/10/ecommerce_-pos_-integration-2048x1448.jpg",
-    tags: ["Back-End", "E-commerce", ".NET Core & API", "Custom Printing"]
   },
   {
     title: "Learnfy - IBSRA Educational Platform",
     description: "A comprehensive educational platform for online learning and course management.",
     slug: "learnfy-educational",
-    imageUrl: "https://tse1.mm.bing.net/th/id/OIP.5UR1gZMzwVIBER5U-OumOQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774014251/Gemini_Generated_Image_D_aneamo.png",
     tags: ["Full-Stack", "Mobile Development", "Education", ".NET Core & API"]
   },
   {
-    title: "The New Portfolio",
+    title: "The Pixel Portfolio",
     description: "A modern pixel portfolio website showcasing professional capabilities.",
     slug: "new-portfolio",
-    imageUrl: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/9cb4f6190639649.65be1214bc755.jpg",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774014271/Gemini_Generated_Image_E1_xxwjn2.png",
     tags: ["Full-Stack", "React", "TypeScript", "Web Design", "UI/UX", "Node.js"]
+  },
+  {
+    title: "IBSRA E-commerceHub",
+    description: "A sophisticated custom poster printing platform with full e-commerce capabilities.",
+    slug: "ibsra-e-commerceHub",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774014198/Gemini_Generated_Image_C1_kfyhqv.png",
+    tags: ["Back-End", "E-commerce", ".NET Core & API", "Custom Printing"]
+  },
+  {
+    title: "IBSRA StoreHub",
+    description: "A retail management system for store operations and inventory.",
+    slug: "ibsra-storeHub",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774014149/Gemini_Generated_Image_B_gtgluz.png",
+    tags: ["Full-Stack", "E-commerce", "React", ".NET Core & API", "Business"]
   },
   {
     title: "Clothing Brand Full-Stack Website",
     description: "A professional fashion e-commerce platform.",
     slug: "clothing-brand-website",
-    imageUrl: "https://raw.githubusercontent.com/shabrina12/FullStack-Ecommerce-Clothing-Web/main/src/assets/header-section.png",
+    imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774014391/Gemini_Generated_Image_F1_gzgkzf.png",
     tags: ["Full-Stack", "E-commerce", "React", "UI/UX", ".NET Core & API" ]
   }
 ];

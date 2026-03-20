@@ -17,7 +17,7 @@ const featuredPosts = [
     slug: "rise-of-JAMstack-architecture",
     date: new Date("2023-05-12"),
     imageUrl:
-      "https://codeneos.com/public/assets/images/blog/blogimage_1721641897.jpg",
+      "https://res.cloudinary.com/dkh59ytfc/image/upload/f_auto,q_auto/Gemini_Generated_Image_1_mrmu9b",
     readTime: 6,
   },
   {
@@ -26,7 +26,7 @@ const featuredPosts = [
     slug: "javaScript-framework-wars",
     date: new Date("2023-07-03"),
     imageUrl:
-      "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*iDHzfkfNGB-_fwbkPfZhZg.png",
+      "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774012185/Gemini_Generated_Image_3_ugc5zg.png",
     readTime: 7,
   },
   {
@@ -35,7 +35,7 @@ const featuredPosts = [
     slug: "full-stack-development",
     date: new Date("2023-08-15"),
     imageUrl:
-      "https://www.launchidea.in/_next/image?url=https%3A%2F%2Fadmin.launchidea.in%2Ftemp-file%2Fc4da58150c354d34689b2b80d8ca238e35e020fd84bb0567253615701e9fa190%3Ffilename%3D1741691261White%252Band%252BBlue%252BProfessional%252BModern%252BTechnology%252BPitch%252BDeck%252BPresentation%252B%2525282%252529.webp&w=1920&q=75",
+      "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774013571/Gemini_Generated_Image_4_ov7bwo.png",
     readTime: 9,
   },
 ];
@@ -47,7 +47,7 @@ const featuredWorks = [
       "A comprehensive healthcare management solution for digitizing hospital operations.",
     slug: "hospital-management-system",
     imageUrl:
-      "https://media.geeksforgeeks.org/wp-content/uploads/20240314153915/Hospital--management-system-project-team.webp",
+      "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774013741/Gemini_Generated_Image_A1_fkjfs9.png",
     tags: [
       "Full-Stack",
       "Healthcare",
@@ -62,7 +62,7 @@ const featuredWorks = [
       "A retail management system for store operations and inventory.",
     slug: "ibsra-storeHub",
     imageUrl:
-      "https://www.appverticals.com/blog/wp-content/uploads/2021/09/Payment-Gateway.jpg",
+      "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774014149/Gemini_Generated_Image_B_gtgluz.png",
     tags: ["Full-Stack", "E-commerce", "React", ".NET Core & API", "Business"],
   },
 ];
