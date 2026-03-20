@@ -19,53 +19,67 @@
 }
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
+  /* ── Palette: light mode ──────────────────────
+     bg:      #f0f2ff  near-white lavender
+     stop 1:  #c5cee0  silver-lavender
+     stop 2:  #8fa3d4  periwinkle
+     stop 3:  #4a6cf7  royal blue  ← primary
+     stop 4:  #1a2447  deep navy   ← foreground
+  ─────────────────────────────────────────────── */
+  --foreground-rgb: 26, 36, 71;
+  --background-start-rgb: 240, 242, 255;
+  --background-end-rgb: 240, 242, 255;
   --pixel-size: 4px;
-  
-  --background: 0 0% 100%;
-  --foreground: 0 0% 3.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 3.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 3.9%;
-  --primary: 35 100% 58.8%;
-  --primary-foreground: 0 0% 98%;
-  --secondary: 0 0% 96.1%;
-  --secondary-foreground: 0 0% 9%;
-  --muted: 0 0% 96.1%;
-  --muted-foreground: 0 0% 45.1%;
-  --accent: 0 84.2% 60.2%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 89.8%;
-  --input: 0 0% 89.8%;
-  --ring: 45 100% 58.8%;
+
+  --background:          232 100% 97%;   /* #f0f2ff */
+  --foreground:          228  46% 19%;   /* #1a2447 */
+  --card:                232 100% 97%;   /* #f0f2ff */
+  --card-foreground:     228  46% 19%;   /* #1a2447 */
+  --popover:             232 100% 97%;
+  --popover-foreground:  228  46% 19%;
+  --primary:             228  90% 63%;   /* #4a6cf7 royal blue */
+  --primary-foreground:    0   0% 100%; /* white */
+  --secondary:           218  30% 83%;   /* #c5cee0 silver-lavender */
+  --secondary-foreground: 228  46% 19%; /* #1a2447 */
+  --muted:               224  40% 92%;   /* soft lavender tint */
+  --muted-foreground:    218  46% 69%;   /* #8fa3d4 periwinkle */
+  --accent:              218  46% 69%;   /* #8fa3d4 periwinkle */
+  --accent-foreground:   228  46% 19%;   /* #1a2447 */
+  --destructive:           0  72% 51%;
+  --destructive-foreground: 0   0% 98%;
+  --border:              218  30% 83%;   /* #c5cee0 */
+  --input:               218  30% 83%;
+  --ring:                228  90% 63%;   /* #4a6cf7 */
   --radius: 0;
 }
 
 .dark {
-  --background: 0 0% 3.9%;
-  --foreground: 0 0% 98%;
-  --card: 0 0% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --popover: 0 0% 3.9%;
-  --popover-foreground: 0 0% 98%;
-  --primary: 35 100% 58.8%;
-  --primary-foreground: 0 0% 9%;
-  --secondary: 0 0% 14.9%;
-  --secondary-foreground: 0 0% 98%;
-  --muted: 0 0% 14.9%;
-  --muted-foreground: 0 0% 63.9%;
-  --accent: 0 84.2% 60.2%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 14.9%;
-  --input: 0 0% 14.9%;
-  --ring: 45 100% 58.8%;
+  /* ── Palette: dark mode ───────────────────────
+     bg:      #0d1226  deepest navy
+     stop 1:  #1a2447  base navy
+     stop 2:  #2d4080  mid navy-blue
+     stop 3:  #4a6cf7  royal blue  ← primary
+     stop 4:  #c5cee0  lavender    ← foreground
+  ─────────────────────────────────────────────── */
+  --background:          228  50% 10%;   /* #0d1226 */
+  --foreground:          218  30% 83%;   /* #c5cee0 */
+  --card:                228  46% 15%;   /* slightly lighter than bg */
+  --card-foreground:     218  30% 83%;   /* #c5cee0 */
+  --popover:             228  46% 15%;
+  --popover-foreground:  218  30% 83%;
+  --primary:             228  90% 63%;   /* #4a6cf7 royal blue */
+  --primary-foreground:    0   0% 100%; /* white */
+  --secondary:           228  46% 19%;   /* #1a2447 */
+  --secondary-foreground: 218  30% 83%; /* #c5cee0 */
+  --muted:               228  47% 19%;   /* #1a2447 */
+  --muted-foreground:    218  46% 69%;   /* #8fa3d4 */
+  --accent:              228  47% 34%;   /* #2d4080 mid navy-blue */
+  --accent-foreground:   218  30% 83%;   /* #c5cee0 */
+  --destructive:           0  55% 35%;
+  --destructive-foreground: 0   0% 98%;
+  --border:              228  47% 25%;   /* subtle navy border */
+  --input:               228  47% 25%;
+  --ring:                228  90% 63%;   /* #4a6cf7 */
 }
 
 @layer base {
@@ -123,12 +137,15 @@
 
   .dark .pixel-button {
     background: theme('colors.primary.DEFAULT');
-    color: theme('colors.background');
+    color: theme('colors.foreground');
+    border-color: theme('colors.foreground');
+    box-shadow: 4px 4px 0 0 theme('colors.foreground / 0.5');
   }
 
   .dark .pixel-button[data-variant="outline"] {
     background: theme('colors.background');
     color: theme('colors.foreground');
+    border-color: theme('colors.primary.DEFAULT');
   }
 
   .pixel-button:hover {

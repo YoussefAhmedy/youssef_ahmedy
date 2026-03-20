@@ -2,9 +2,17 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { NavMenu } from "@/components/nav-menu";
 import { cn } from "@/lib/utils";
+
+/* NavMenu uses lucide-react icons inside framer-motion — their SVG paths
+   differ between server and client, causing hydration mismatches.
+   Rendering client-only eliminates all 5 hydration errors. */
+const NavMenu = dynamic(
+  () => import("@/components/nav-menu").then((mod) => mod.NavMenu),
+  { ssr: false, loading: () => <div className="h-14 w-[520px]" /> }
+);
 
 export function PixelHeader() {
   const [scrolled, setScrolled] = useState(false);
@@ -13,20 +21,21 @@ export function PixelHeader() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header 
+    <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out", 
-        scrolled ? "py-2 bg-white shadow-md dark:bg-black" : "py-4 bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out",
+        scrolled
+          ? "py-2 bg-background/95 backdrop-blur-sm shadow-md border-b border-border"
+          : "py-4 bg-transparent"
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <motion.div 
+        <motion.div
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, type: "spring" }}
@@ -35,8 +44,8 @@ export function PixelHeader() {
           <div className="flex items-center space-x-2">
             <div className="mcdonalds-arch"></div>
             <h1 className="text-xl md:text-2xl font-pixel tracking-tight">
-              <span className="text-accent font-bold">Youssef</span>
-              <span className="text-black dark:text-white">Ahmedy</span>
+              <span className="text-primary font-bold">Youssef</span>
+              <span className="text-foreground">Ahmedy</span>
             </h1>
           </div>
         </motion.div>

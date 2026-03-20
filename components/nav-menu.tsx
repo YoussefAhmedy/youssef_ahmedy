@@ -50,8 +50,8 @@ export function NavMenu() {
             className={cn(
               "pixel-button rounded-none flex flex-col items-center justify-center px-3 py-2 h-14 w-20 sm:w-24",
               pathname === item.path 
-                ? "dark:bg-yellow-500 dark:text-background bg-primary border-black" 
-                : "bg-white dark:bg-foreground border-black hover:bg-primary/80"
+                ? "bg-primary text-foreground dark:bg-primary dark:text-foreground border-foreground" 
+                : "bg-background dark:bg-secondary border-foreground hover:bg-primary/20 dark:hover:bg-primary/30"
             )}
           >
             <span className="mb-1">{item.icon}</span>
@@ -71,7 +71,7 @@ export function NavMenu() {
           href="https://github.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="pixel-button rounded-none flex flex-col items-center justify-center px-3 py-2 h-14 w-20 sm:w-24 bg-white dark:bg-foreground border-black hover:bg-primary/80"
+          className="pixel-button rounded-none flex flex-col items-center justify-center px-3 py-2 h-14 w-20 sm:w-24 bg-background dark:bg-secondary border-foreground hover:bg-primary/20 dark:hover:bg-primary/30"
         >
           <span className="mb-1"><Gamepad2Icon size={20} /></span>
           <span className="text-xs sm:text-sm font-bold">Play</span>
