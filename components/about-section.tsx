@@ -5,12 +5,22 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { BrainCircuitIcon, CodeIcon, LayoutIcon, DatabaseIcon, CloudIcon } from "lucide-react";
 
+const TOTAL_BLOCKS = 12;
+
+function getRank(blocks: number) {
+  if (blocks >= 12) return { label: "MASTER",   color: "text-yellow-400",  bg: "bg-yellow-400" };
+  if (blocks >= 11) return { label: "EXPERT",   color: "text-blue-400",   bg: "bg-blue-400"   };
+  if (blocks >= 10) return { label: "ADVANCED", color: "text-green-400",  bg: "bg-green-400"  };
+  if (blocks >= 9)  return { label: "SKILLED",  color: "text-purple-400", bg: "bg-purple-400" };
+  return               { label: "JUNIOR",   color: "text-gray-400",   bg: "bg-gray-400"   };
+}
+
 const skills = [
-  { name: "Back-End Development", icon: <CodeIcon className="h-6 w-6" />, level: 95 },
-  { name: "Fornt-End Development", icon: <LayoutIcon className="h-6 w-6" />, level: 85 },
-  { name: "Database Management", icon: <DatabaseIcon className="h-6 w-6" />, level: 90 },
-  { name: "Cloud & DevOps", icon: <CloudIcon className="h-6 w-6" />, level: 80 },
-  { name: "AI Integration", icon: <BrainCircuitIcon className="h-6 w-6" />, level: 75 },
+  { name: "Back-End Development",  icon: <CodeIcon className="h-5 w-5" />,          blocks: 11, xp: "11,420 XP" },
+  { name: "Front-End Development", icon: <LayoutIcon className="h-5 w-5" />,         blocks: 10, xp: "9,850 XP"  },
+  { name: "Database Management",   icon: <DatabaseIcon className="h-5 w-5" />,       blocks: 11, xp: "10,700 XP" },
+  { name: "Cloud & DevOps",        icon: <CloudIcon className="h-5 w-5" />,          blocks: 9,  xp: "8,340 XP"  },
+  { name: "AI Integration",        icon: <BrainCircuitIcon className="h-5 w-5" />,   blocks: 9,  xp: "7,660 XP"  },
 ];
 
 export function AboutSection() {
@@ -60,31 +70,56 @@ export function AboutSection() {
           </p>
 
           <div className="space-y-4 mt-8" ref={skillsRef}>
-            <h4 className="text-xl font-bold">My Skills</h4>
+            <h4 className="text-xl font-bold flex items-center gap-2">
+              <span className="inline-block w-3 h-3 bg-primary align-middle" />
+              My Skills
+              <span className="inline-block w-3 h-3 bg-primary align-middle" />
+            </h4>
 
-            <div className="space-y-4">
-              {skills.map((skill, i) => (
-                <div key={skill.name} className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <div className="mr-2 p-2 bg-primary text-black">
-                        {skill.icon}
+            <div className="space-y-3">
+              {skills.map((skill, i) => {
+                const rank = getRank(skill.blocks);
+                return (
+                  <div key={skill.name} className="border-2 border-black bg-white/5 dark:bg-black/20 p-3 space-y-2">
+                    {/* Row 1: icon + name + rank badge + XP */}
+                    <div className="flex items-center justify-between gap-2 flex-wrap">
+                      <div className="flex items-center gap-2">
+                        <div className="p-1.5 bg-primary text-black shrink-0">
+                          {skill.icon}
+                        </div>
+                        <span className="font-bold text-sm leading-tight">{skill.name}</span>
                       </div>
-                      <span className="font-medium">{skill.name}</span>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <span className={`text-[10px] font-bold tracking-widest border px-1.5 py-0.5 ${rank.color} border-current`}>
+                          {rank.label}
+                        </span>
+                        <span className="text-[10px] font-mono text-muted-foreground">{skill.xp}</span>
+                      </div>
                     </div>
-                    <span className="font-bold">{skill.level}%</span>
-                  </div>
 
-                  <div className="h-6 w-full bg-gray-200 dark:bg-gray-700 border-2 border-black">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={skillsInView ? { width: `${skill.level}%` } : { width: 0 }}
-                      transition={{ duration: 1, delay: 0.2 + i * 0.1 }}
-                      className="h-full bg-primary"
-                    />
+                    {/* Row 2: pixel XP blocks */}
+                    <div className="flex gap-[3px] items-center">
+                      {Array.from({ length: TOTAL_BLOCKS }).map((_, bi) => (
+                        <motion.div
+                          key={bi}
+                          initial={{ opacity: 0, scaleY: 0 }}
+                          animate={skillsInView
+                            ? { opacity: 1, scaleY: 1 }
+                            : { opacity: 0, scaleY: 0 }}
+                          transition={{ duration: 0.2, delay: 0.3 + i * 0.1 + bi * 0.04 }}
+                          className={`flex-1 h-4 border border-black/30 ${
+                            bi < skill.blocks ? rank.bg : "bg-gray-200 dark:bg-gray-700"
+                          }`}
+                          style={{ transformOrigin: "bottom" }}
+                        />
+                      ))}
+                      <span className="ml-1 text-[10px] font-mono font-bold text-muted-foreground shrink-0">
+                        LVL {skill.blocks}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </motion.div>
