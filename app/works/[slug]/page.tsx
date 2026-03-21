@@ -226,7 +226,7 @@ export default function WorksPost({ params }: { params: { slug: string } }) {
           </Button>
 
           <div>
-            <h1 className="text-4xl font-bold mb-6">{work.title}</h1>
+            <h1 className="text-base sm:text-xl md:text-2xl lg:text-4xl font-bold mb-6 break-words leading-loose">{work.title}</h1>
             
             <div className="flex flex-wrap gap-2 mb-8">
               {work.tags.map((tag) => (
@@ -239,7 +239,7 @@ export default function WorksPost({ params }: { params: { slug: string } }) {
               ))}
             </div>
 
-            <div className="relative h-[400px] w-full mb-8">
+            <div className="relative h-[220px] sm:h-[300px] md:h-[400px] w-full mb-8">
               <div className="absolute inset-4 border-4 border-foreground bg-primary/20 z-0"></div>
               <div className="absolute inset-0 pixel-card overflow-hidden">
                 <Image

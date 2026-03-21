@@ -74,6 +74,10 @@ export default function Home() {
 
       <PixelSeparator />
 
+      <section className="container mx-auto px-4 pt-16 pb-0">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-0 text-center">About Me</h2>
+      </section>
+
       <AboutSection />
 
       <PixelSeparator />
@@ -84,8 +88,8 @@ export default function Home() {
 
       {/* Featured Works Section */}
       <section className="container mx-auto px-4 py-16">
-        <div className="flex justify-between items-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">Featured Works</h2>
+        <div className="flex flex-wrap justify-between items-center gap-4 mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Featured Works</h2>
           <Button asChild variant="outline" className="pixel-button">
             <Link href="/works" className="flex items-center">
               View All
@@ -113,8 +117,8 @@ export default function Home() {
 
       {/* Blog Section */}
       <section className="container mx-auto px-4 py-16">
-        <div className="flex justify-between items-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">Latest Articles</h2>
+        <div className="flex flex-wrap justify-between items-center gap-4 mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Latest Articles</h2>
           <Button asChild variant="outline" className="pixel-button">
             <Link href="/blog" className="flex items-center">
               Read All

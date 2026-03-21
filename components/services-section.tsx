@@ -29,7 +29,7 @@ const services = [
 export function ServicesSection() {
   return (
     <section className="container mx-auto px-4 py-16">
-      <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">My Services</h2>
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 text-center">My Services</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {services.map((service, index) => (
@@ -45,7 +45,7 @@ export function ServicesSection() {
               {service.icon}
             </div>
             
-            <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+            <h3 className="text-base lg:text-lg font-bold mb-3 break-words leading-snug">{service.title}</h3>
             <p className="text-gray-700 dark:text-gray-300">{service.description}</p>
           </motion.div>
         ))}

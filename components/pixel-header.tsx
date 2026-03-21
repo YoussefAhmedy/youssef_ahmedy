@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
    Rendering client-only eliminates all 5 hydration errors. */
 const NavMenu = dynamic(
   () => import("@/components/nav-menu").then((mod) => mod.NavMenu),
-  { ssr: false, loading: () => <div className="h-14 w-[520px]" /> }
+  { ssr: false, loading: () => <div className="h-10 w-10 md:h-14 md:w-[400px] lg:w-[520px]" /> }
 );
 
 export function PixelHeader() {

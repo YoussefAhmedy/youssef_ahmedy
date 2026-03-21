@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Problem 1: Default 80% visual scale on desktop ─────────────────────────
+   Applies CSS zoom only on screens ≥1024 px so the site looks exactly as it
+   does when the browser is manually set to 80%.  Mobile is left at 100%.
+────────────────────────────────────────────────────────────────────────────── */
+@media (min-width: 1024px) {
+  html {
+    zoom: 0.8;
+  }
+}
+
+/* ── Problem 2: Prevent horizontal overflow on ALL screen sizes ──────────────
+   This is the root fix for content spilling outside the viewport on mobile.
+────────────────────────────────────────────────────────────────────────────── */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 @font-face {
   font-family: 'VT323';
   font-style: normal;

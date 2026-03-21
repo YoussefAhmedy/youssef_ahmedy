@@ -177,7 +177,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           </Button>
 
           <div>
-            <h1 className="text-4xl font-bold mb-6">{post.title}</h1>
+            <h1 className="text-[11px] sm:text-base md:text-xl lg:text-2xl font-bold mb-6 break-words leading-loose">{post.title}</h1>
             
             <div className="flex items-center gap-4 text-muted-foreground mb-8">
               <span>{post.date.toLocaleDateString()}</span>
@@ -185,7 +185,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               <span>{post.readTime} min read</span>
             </div>
 
-            <div className="relative h-[400px] w-full mb-8">
+            <div className="relative h-[200px] sm:h-[300px] md:h-[400px] w-full mb-8 overflow-hidden">
               <div className="absolute inset-4 border-4 border-foreground bg-primary/20 z-0"></div>
               <div className="absolute inset-0 pixel-card overflow-hidden">
                 <Image

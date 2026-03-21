@@ -1,31 +1,46 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 const CustomCursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const dotRef = useRef<HTMLDivElement>(null);
+  const pos = useRef({ x: -100, y: -100 });
 
   useEffect(() => {
-    const updatePosition = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+    const onMove = (e: MouseEvent) => {
+      pos.current = { x: e.clientX, y: e.clientY };
     };
+    window.addEventListener('mousemove', onMove);
 
-    window.addEventListener('mousemove', updatePosition);
-    return () => window.removeEventListener('mousemove', updatePosition);
+    let rafId: number;
+    const loop = () => {
+      if (dotRef.current) {
+        // globals.css applies zoom:0.8 on html at ≥1024px.
+        // Fixed elements inherit that zoom, so mouse coords must be
+        // divided by 0.8 to land the dot exactly on the pointer.
+        const cssZoom = window.innerWidth >= 1024 ? 0.8 : 1;
+        dotRef.current.style.transform =
+          `translate(${pos.current.x / cssZoom}px, ${pos.current.y / cssZoom}px)`;
+      }
+      rafId = requestAnimationFrame(loop);
+    };
+    rafId = requestAnimationFrame(loop);
+
+    return () => {
+      window.removeEventListener('mousemove', onMove);
+      cancelAnimationFrame(rafId);
+    };
   }, []);
 
   return (
-    <div 
-      className="fixed w-8 h-8 pointer-events-none z-50"
-      style={{
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-        transform: 'translate(-50%, -50%)'
-      }}
+    <div
+      ref={dotRef}
+      className="fixed top-0 left-0 pointer-events-none z-[9999] hidden lg:block"
+      style={{ willChange: 'transform' }}
     >
-      <div className="w-2 h-2 bg-primary rounded-full" />
+      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
     </div>
   );
-}
+};
 
 export default CustomCursor;

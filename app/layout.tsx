@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   title: "Youssef Ahmedy - .NET Full-Stack Web Developer",
   description:
     "A .NET Full-Stack Web Developer who builds robust web applications from the ground up, with expertise in both Front-end and Back-end technologies",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
 export default function RootLayout({
