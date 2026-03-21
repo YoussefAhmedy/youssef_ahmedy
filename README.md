@@ -9,7 +9,13 @@
 [![Next.js](https://img.shields.io/badge/Next.js-13.5.1-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.2-3178c6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 
-![Portfolio Preview](https://res.cloudinary.com/dkh59ytfc/image/upload/v1774014788/Gemini_Generated_Image_sss_j66j3g.png)
+![Portfolio Preview](https://res.cloudinary.com/dkh59ytfc/image/upload/v1774123472/PicsArt_03-21-09.47.38_jc7kut.png)
+
+Portfolio Preview - Light Mode
+
+![Portfolio Preview](https://res.cloudinary.com/dkh59ytfc/image/upload/v1774123444/PicsArt_03-21-09.50.21_hoif8k.png)
+
+Portfolio Preview - Dark Mode
 
 </div>
 
