@@ -29,7 +29,7 @@ Please ensure you have Node.js and npm or yarn installed.
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/YoussefAhmedy/youssef_ahmedy.git
+    git clone https://github.com/YoussefAhmedy/The_Pixel_Portfolio
     ```
 2.  Navigate to the pixel-portfolio directory:
     ```bash
