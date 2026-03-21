@@ -43,10 +43,9 @@ export function PixelHero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.75, duration: 0.5 }}
-              className="hidden sm:flex items-center gap-2 text-primary text-base md:text-lg font-bold -mt-2"
+              className="flex text-primary font-bold text-lg sm:text-xl md:text-2xl"
             >
-              <span>✦</span>
-              <span>Pixel-Perfect</span>
+              ✦ Pixel-Perfect
             </motion.p>
 
             <motion.p

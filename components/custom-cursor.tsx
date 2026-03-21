@@ -15,12 +15,13 @@ const CustomCursor = () => {
     let rafId: number;
     const loop = () => {
       if (dotRef.current) {
-        // globals.css applies zoom:0.8 on html at ≥1024px.
-        // Fixed elements inherit that zoom, so mouse coords must be
-        // divided by 0.8 to land the dot exactly on the pointer.
-        const cssZoom = window.innerWidth >= 1024 ? 0.8 : 1;
-        dotRef.current.style.transform =
-          `translate(${pos.current.x / cssZoom}px, ${pos.current.y / cssZoom}px)`;
+        // No zoom correction needed — clientX/clientY are already in the
+        // same zoomed CSS coordinate space as position:fixed elements.
+        // +16 offset aligns the dot with the visual centre of the 32×32
+        // sword cursor sprite (whose hotspot is at 0,0 / top-left).
+        const x = pos.current.x + 16;
+        const y = pos.current.y + 16;
+        dotRef.current.style.transform = `translate(${x}px, ${y}px)`;
       }
       rafId = requestAnimationFrame(loop);
     };
@@ -36,9 +37,9 @@ const CustomCursor = () => {
     <div
       ref={dotRef}
       className="fixed top-0 left-0 pointer-events-none z-[9999] hidden lg:block"
-      style={{ willChange: 'transform' }}
+      style={{ willChange: 'transform', marginLeft: '-6px', marginTop: '-6px' }}
     >
-      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
+      <div className="w-3 h-3 bg-blue-500 rounded-full" />
     </div>
   );
 };
