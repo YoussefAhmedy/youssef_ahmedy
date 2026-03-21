@@ -130,7 +130,7 @@ const works = {
     link: "https://github.com/YoussefAhmedy/learnfy"
   },
   "new-portfolio": {
-    title: "The New Portfolio",
+    title: "The Pixel Portfolio",
     description: "A modern pixel portfolio website showcasing professional capabilities.",
     content: `
       The New Portfolio is a modern personal portfolio website designed to showcase professional work and achievements while maintaining contemporary web design standards.
@@ -156,7 +156,7 @@ const works = {
     `,
     imageUrl: "https://res.cloudinary.com/dkh59ytfc/image/upload/v1774014271/Gemini_Generated_Image_E1_xxwjn2.png",
     tags: ["Full-Stack", "React", "TypeScript", "Web Design", "UI/UX", "Node.js"],
-    link: "https://github.com/YoussefAhmedy/New.Portfolio"
+    link: "https://github.com/YoussefAhmedy/The_Pixel_Portfolio"
   },
   "clothing-brand-website": {
     title: "Clothing Brand Full-Stack Website",
