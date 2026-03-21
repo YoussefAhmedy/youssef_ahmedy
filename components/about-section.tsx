@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import { BrainCircuitIcon, CodeIcon, LayoutIcon, DatabaseIcon, CloudIcon } from "lucide-react";
 
 const skills = [
@@ -13,14 +14,17 @@ const skills = [
 ];
 
 export function AboutSection() {
+  const skillsRef = useRef(null);
+  const skillsInView = useInView(skillsRef, { once: true, amount: 0.1 });
+
   return (
     <section className="container mx-auto px-4 py-16">
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5 }}
           className="relative"
         >
@@ -37,29 +41,29 @@ export function AboutSection() {
             </div>
           </div>
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5 }}
           className="space-y-6"
         >
           <h3 className="text-2xl font-bold">Hi, I'm Youssef</h3>
-          
+
           <p className="text-lg">
             I'm a motivated .NET Full-Stack Web Developer with a passion for creating scalable, secure, and maintainable web applications. With hands-on experience in building robust systems, I specialize in designing RESTful APIs and delivering dynamic user experiences.
           </p>
-          
+
           <p className="text-lg">
-            My background in both backend and frontend development allows me to create cohesive solutions from concept to implementation. I'm particularly skilled in ASP.NET Core architecture, microservices design, and modern JavaScript frameworks. 
+            My background in both backend and frontend development allows me to create cohesive solutions from concept to implementation. I'm particularly skilled in ASP.NET Core architecture, microservices design, and modern JavaScript frameworks.
           </p>
-          
-          <div className="space-y-4 mt-8">
+
+          <div className="space-y-4 mt-8" ref={skillsRef}>
             <h4 className="text-xl font-bold">My Skills</h4>
-            
+
             <div className="space-y-4">
-              {skills.map((skill) => (
+              {skills.map((skill, i) => (
                 <div key={skill.name} className="space-y-2">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
@@ -70,15 +74,14 @@ export function AboutSection() {
                     </div>
                     <span className="font-bold">{skill.level}%</span>
                   </div>
-                  
+
                   <div className="h-6 w-full bg-gray-200 dark:bg-gray-700 border-2 border-black">
                     <motion.div
                       initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      viewport={{ once: true, margin: "-60px" }}
-                      transition={{ duration: 1, delay: 0.5 }}
+                      animate={skillsInView ? { width: `${skill.level}%` } : { width: 0 }}
+                      transition={{ duration: 1, delay: 0.2 + i * 0.1 }}
                       className="h-full bg-primary"
-                    ></motion.div>
+                    />
                   </div>
                 </div>
               ))}
