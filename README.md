@@ -1,13 +1,21 @@
 <div align="center">
 
-# ◈ RobinHub — Robin Fashion Store
+# ✦ Youssef Ahmedy — Pixel Portfolio
 
-### A production-grade full-stack e-commerce platform for a contemporary fashion label, built with React 19 and .NET 9.
+### A full-stack .NET developer's personal portfolio and blog, built with a unique retro pixel-art aesthetic.
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-robin.store-BF4317?style=for-the-badge)](https://cautious-goldfish-g47r5xwwxvvq3w4ww-5173.app.github.dev/shop)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-RobinHub-0E0D0B?style=for-the-badge&logo=github)](https://github.com/YoussefAhmedy/RobinHub)
-[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
-[![.NET](https://img.shields.io/badge/.NET-9-512BD4?style=for-the-badge&logo=dotnet)](https://dotnet.microsoft.com/)
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-youssefahmedy.vercel.app-4a6cf7?style=for-the-badge)](https://youssefahmedy.vercel.app/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-The__Pixel__Portfolio-1a2447?style=for-the-badge&logo=github)](https://github.com/YoussefAhmedy/The_Pixel_Portfolio)
+[![Next.js](https://img.shields.io/badge/Next.js-13.5.1-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.2-3178c6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+
+![Portfolio Preview](https://res.cloudinary.com/dkh59ytfc/image/upload/v1774123472/PicsArt_03-21-09.47.38_jc7kut.png)
+
+Portfolio Preview - Light Mode
+
+![Portfolio Preview](https://res.cloudinary.com/dkh59ytfc/image/upload/v1774123444/PicsArt_03-21-09.50.21_hoif8k.png)
+
+Portfolio Preview - Dark Mode
 
 </div>
 
@@ -15,76 +23,62 @@
 
 ## 📖 Overview
 
-**RobinHub** is the complete source for Robin — a contemporary fashion label's e-commerce storefront and operations platform. The project covers everything from the public-facing product catalogue to the internal staff portal and AI-assisted admin dashboard, all under a single monorepo.
+This is a personal portfolio and blog website for **Youssef Ahmedy**, a .NET Full-Stack Web Developer. The site is designed around a **pixel-art / retro gaming aesthetic** — from the custom pixel borders and Press Start 2P typography, to the dithering background and pixel cursor — while remaining fully responsive and production-ready.
 
-The platform serves four audiences simultaneously:
-- **Shoppers** — browse, filter, and purchase through a refined editorial storefront
-- **Staff / Employees** — manage orders, mark shipments, and update tracking from a dedicated portal
-- **Finance** — access revenue summaries and export reports
-- **Super Admins** — full product CRUD, store analytics, and an AI assistant that writes catalog entries from plain English
+The portfolio serves three core purposes:
+- **Showcase projects** with dedicated detail pages covering tech stack, features, and GitHub links
+- **Publish technical articles** on full-stack development, architecture, and modern web practices
+- **Present professional services** in a memorable, visually distinctive format
 
 ---
 
 ## ✨ Features
 
-### 🛍️ Storefront
-- **Editorial Design System** — Cormorant Garamond display type, DM Sans body, warm cream/rust/olive palette inspired by the robin bird
-- **Product Catalogue** — filterable by gender, category, season, age group, price range, and availability with real-time pagination
-- **Product Detail Pages** — full image gallery, size selector, related products, customer reviews, and waitlist for sold-out items
-- **Slide-in Cart Drawer** — persistent cart state synced with the API, with live subtotal
-- **Checkout Flow** — shipping method selection, address capture, order confirmation
-- **New In / Trending** — dedicated section surfacing `IsTrending` products
+### 🎮 Design & UX
+- **Pixel Art Style** — Custom pixel borders, Press Start 2P + VT323 fonts, dithering canvas background
+- **Light / Dark Mode** — Full theme toggle with a carefully tuned pixel-art colour palette (lavender light / deep navy dark)
+- **Scroll Animations** — Framer Motion `whileInView` animations that trigger correctly on both desktop and mobile as you scroll
+- **Responsive Layout** — Mobile-first design with a hamburger menu on small screens and full nav on desktop
+- **CSS Zoom Scaling** — `zoom: 0.8` applied at `≥1024px` for a tighter desktop layout
 
-### 🔐 Auth & Roles
-- JWT Bearer authentication with `localStorage` token management
-- Four roles with distinct frontend views and API policies: `Customer`, `Employee/Staff`, `Finance`, `SuperAdmin`
-- Role-aware Navbar links and protected route redirects
+### 📄 Pages
+| Page | Description |
+|------|-------------|
+| `/` | Home — Hero, About, Services, Featured Works, Latest Articles |
+| `/about` | Full about page with skills and background |
+| `/works` | All projects grid |
+| `/works/[slug]` | Individual project detail page |
+| `/blog` | All articles grid |
+| `/blog/[slug]` | Individual article detail page |
 
-### 🤖 AI-Powered Admin
-- Claude-powered assistant embedded in the Super Admin dashboard
-- Create products from natural language: *"Add a rust crewneck at 1,400 EGP, sizes S–XL"* — AI generates the full product payload and posts it to the catalog without touching code
-- Full store context (revenue, order count, catalog size) injected into every system prompt
-
-### 📦 Staff Portal
-- Dedicated order queue with status filter chips
-- Update order status, assign tracking numbers, mark shipments
-- Shipping method breakdown and active transit list
-- Staff-targeted email notifications on assignment and reminders
-
-### 📧 Role-Based Email System
-
-| Trigger | Customer | Staff | Finance | SuperAdmin |
-|---------|----------|-------|---------|------------|
-| Order placed | ✅ Confirmation | ✅ Assignment | — | ✅ Alert |
-| Order shipped | ✅ Tracking info | — | — | — |
-| Order delivered | ✅ Confirmation | — | — | — |
-| Monthly report | — | — | ✅ Revenue | ✅ Summary |
-
-### 📊 Admin Dashboard
-- Revenue line chart (30-day window)
-- Orders-by-status breakdown
-- Top products and category performance
-- Live KPI cards: total revenue, orders, customers, active stock
+### 🧩 Components
+- **PixelHero** — Animated hero with heading, tagline, CTA buttons, and badge overlays on the hero image
+- **AboutSection** — Portrait image + biography + animated skill progress bars
+- **ServicesSection** — Four service cards with hover animations
+- **WorksCard / BlogCard** — Reusable cards with viewport-triggered entrance animations
+- **NavMenu** — Desktop nav with active state highlighting; mobile animated hamburger dropdown with backdrop
+- **PixelHeader** — Sticky header with scroll-aware background blur
+- **PixelFooter** — Pixel-styled footer
+- **DitheringBackground** — Canvas-rendered animated dithering background (client-only)
+- **ThemeToggle** — Light/dark mode switcher
 
 ---
 
 ## 🛠 Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| **Frontend Framework** | [React 19](https://react.dev/) + [Vite 8](https://vitejs.dev/) |
-| **Routing** | [React Router 6](https://reactrouter.com/) |
-| **Charts** | [Recharts](https://recharts.org/) |
+| Category | Technology |
+|----------|-----------|
+| **Framework** | [Next.js 13.5.1](https://nextjs.org/) (App Router) |
+| **Language** | [TypeScript 5.2](https://www.typescriptlang.org/) |
+| **Styling** | [Tailwind CSS 3.3](https://tailwindcss.com/) |
+| **UI Components** | [shadcn/ui](https://ui.shadcn.com/) + [Radix UI](https://www.radix-ui.com/) |
+| **Animations** | [Framer Motion 11](https://www.framer.com/motion/) |
 | **Icons** | [Lucide React](https://lucide.dev/) |
-| **Fonts** | Cormorant Garamond, DM Sans (Google Fonts) |
-| **Backend Framework** | [ASP.NET Core 9](https://dotnet.microsoft.com/en-us/apps/aspnet) |
-| **ORM** | [Entity Framework Core 9](https://learn.microsoft.com/en-us/ef/core/) |
-| **Database** | SQL Server (configurable) |
-| **Authentication** | JWT Bearer Tokens, BCrypt |
-| **Email** | SMTP — Gmail / SendGrid / Brevo compatible |
-| **AI** | [Anthropic Claude API](https://www.anthropic.com/) (`claude-sonnet-4`) |
-| **Language (Frontend)** | JavaScript (JSX) |
-| **Language (Backend)** | C# 13 |
+| **Theming** | [next-themes](https://github.com/pacocoursey/next-themes) |
+| **Date Formatting** | [date-fns](https://date-fns.org/) |
+| **Fonts** | Press Start 2P, VT323 (Google Fonts) |
+| **Images** | Cloudinary CDN |
+| **Deployment** | Vercel |
 
 ---
 
@@ -92,163 +86,90 @@ The platform serves four audiences simultaneously:
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) v18 or higher
-- [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
-- SQL Server (or configure another EF Core provider)
+- npm or yarn
 
-### Frontend
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/YoussefAhmedy/The_Pixel_Portfolio.git
+   cd The_Pixel_Portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open in browser**
+   ```
+   http://localhost:3000
+   ```
+
+### Production Build
 
 ```bash
-cd robin-web
-npm install
-npm run dev
-# → http://localhost:5173
+# Build
+npm run build
+
+# Start production server
+npm start
 ```
-
-Create `robin-web/.env.local` and set the API base URL:
-
-```env
-VITE_API_URL=http://localhost:5000/api
-```
-
-> For GitHub Codespaces, replace `localhost:5000` with your backend's forwarded port URL.
-
-### Backend (.NET 9)
-
-1. Update `AuraLoom.API/appsettings.json` with your connection string and SMTP credentials
-2. Run migrations and start:
-
-```bash
-cd AuraLoom.API
-dotnet ef database update    # applies all migrations + seeds default data
-dotnet run                   # → http://localhost:5000
-```
-
-> The database seeds automatically on first run with demo products and default user accounts.
 
 ---
 
 ## 📁 Project Structure
 
 ```
-RobinHub/
-├── robin-web/                     # React 19 + Vite frontend
-│   └── src/
-│       ├── pages/
-│       │   ├── HomePage.jsx       # Hero, featured, newsletter
-│       │   ├── ShopPage.jsx       # Product grid, filters, sort, pagination
-│       │   ├── ProductPage.jsx    # Detail, sizes, reviews, waitlist
-│       │   ├── CartPage.jsx       # Cart + checkout
-│       │   ├── AuthPage.jsx       # Login & Register
-│       │   ├── AdminDashboard.jsx # Super Admin: charts, products, AI
-│       │   └── StaffDashboard.jsx # Staff: orders, shipments, tracking
-│       ├── components/
-│       │   ├── Navbar.jsx         # Sticky, role-aware navigation
-│       │   ├── Footer.jsx         # Footer with newsletter form
-│       │   ├── ProductCard.jsx    # Grid card with hover CTA
-│       │   ├── CartDrawer.jsx     # Slide-in cart panel
-│       │   └── RobinLogo.jsx      # Custom SVG logotype
-│       ├── context/
-│       │   ├── AuthContext.jsx    # Auth state + JWT lifecycle
-│       │   └── CartContext.jsx    # Cart state synced with API
-│       └── api/client.js          # Full API client (all endpoints)
-│
-├── AuraLoom.API/                  # ASP.NET Core 9 Web API
-│   ├── Controllers/
-│   │   ├── AuthController.cs      # Register, Login, Me
-│   │   ├── ProductsController.cs  # Public catalogue endpoints
-│   │   ├── CartController.cs      # Cart CRUD [Authorized]
-│   │   ├── OrdersController.cs    # Customer orders [Authorized]
-│   │   ├── AdminController.cs     # Full admin CRUD [SuperAdmin]
-│   │   ├── StaffController.cs     # Order management [Staff+]
-│   │   └── NewsletterController.cs
-│   └── Services/
-│       ├── IEmailService.cs
-│       └── EmailService.cs        # Role-based SMTP templates
-│
-├── AuraLoom.Application/          # Application layer (use cases, DTOs)
-│
-├── AuraLoom.Domain/               # Core domain entities
-│   └── Entities/
-│       ├── Product.cs
-│       ├── Order.cs
-│       ├── User.cs
-│       ├── CartItem.cs
-│       ├── Category.cs
-│       └── NewsletterSubscriber.cs
-│
-├── AuraLoom.Infrastructure/       # EF Core, migrations, seeding
-├── RobinHub.sln
-└── README.md
+├── app/
+│   ├── globals.css          # Global styles, CSS variables, pixel utilities
+│   ├── layout.tsx           # Root layout — header, footer, cursor, providers
+│   ├── page.tsx             # Home page
+│   ├── about/               # About page
+│   ├── works/
+│   │   ├── page.tsx         # All works listing
+│   │   └── [slug]/page.tsx  # Individual work detail
+│   └── blog/
+│       ├── page.tsx         # All articles listing
+│       └── [slug]/page.tsx  # Individual article detail
+├── components/
+│   ├── pixel-header.tsx     # Sticky navigation header
+│   ├── pixel-hero.tsx       # Hero section
+│   ├── pixel-footer.tsx     # Footer
+│   ├── nav-menu.tsx         # Desktop + mobile hamburger nav
+│   ├── about-section.tsx    # About + skills section
+│   ├── services-section.tsx # Services cards section
+│   ├── works-card.tsx       # Reusable works card
+│   ├── blog-card.tsx        # Reusable blog card
+│   ├── custom-cursor.tsx    # Custom cursor component
+│   ├── pixel-separator.tsx  # Decorative section separator
+│   └── ui/                  # shadcn/ui base components
+├── hooks/                   # Custom React hooks
+├── lib/                     # Utility functions
+├── tailwind.config.ts       # Tailwind configuration
+└── next.config.js           # Next.js configuration
 ```
 
 ---
 
-## 🌐 API Reference
+## 🎨 Colour Palette
 
-```
-Public
-  GET  /api/products              List products (full filter support)
-  GET  /api/products/trending     Trending products
-  GET  /api/products/{id}         Product by ID
-  GET  /api/products/slug/{slug}  Product by slug
-  POST /api/auth/register
-  POST /api/auth/login            Returns JWT
-  POST /api/newsletter/subscribe
-
-Customer (JWT required)
-  GET  /api/auth/me
-  GET|POST     /api/cart
-  PUT|DEL      /api/cart/{id}
-  POST /api/orders                Checkout
-  GET  /api/orders                My order history
-
-Staff / Employee (JWT required)
-  GET  /api/staff/orders
-  PUT  /api/staff/orders/{id}/status
-  PUT  /api/staff/orders/{id}/ship
-
-Super Admin (JWT required)
-  GET  /api/admin/stats
-  GET  /api/admin/finance
-  GET  /api/admin/orders
-  PUT  /api/admin/orders/{id}/status
-  GET|POST     /api/admin/products
-  PUT|DEL      /api/admin/products/{id}
-  GET  /api/admin/users
-```
-
----
-
-## 🎨 Brand & Colour Palette
-
-| Token | Hex | Usage |
-|-------|-----|-------|
-| `--rust` | `#BF4317` | Primary CTA, brand accent |
-| `--olive` | `#4A5240` | Staff portal, secondary elements |
-| `--cream` | `#F6F2EC` | Main background |
-| `--parchment` | `#FAF8F4` | Card surfaces |
-| `--ink` | `#0E0D0B` | Headings, dark elements |
-
-**Display:** Cormorant Garamond &nbsp;·&nbsp; **Body:** DM Sans
-
----
-
-## ⚙️ Email Configuration
-
-In `AuraLoom.API/appsettings.json`:
-
-```json
-"EmailSettings": {
-  "SmtpHost": "smtp.gmail.com",
-  "SmtpPort": "587",
-  "SmtpUser": "your@gmail.com",
-  "SmtpPass": "your-app-password",
-  "FromAddress": "noreply@robin.store",
-  "AdminAlertEmail": "admin@robin.store"
-}
-```
-
-> For Gmail, generate an **App Password** via Google Account → Security → 2-Step Verification → App Passwords.
+| Token | Light Mode | Dark Mode |
+|-------|-----------|-----------|
+| Background | `#f0f2ff` near-white lavender | `#0d1226` deep navy |
+| Foreground | `#1a2447` deep navy | `#c5cee0` silver-lavender |
+| Primary | `#4a6cf7` royal blue | `#4a6cf7` royal blue |
+| Secondary | `#c5cee0` silver-lavender | `#1a2447` base navy |
+| Accent | `#8fa3d4` periwinkle | `#2d4080` mid navy-blue |
 
 ---
 
@@ -256,11 +177,11 @@ In `AuraLoom.API/appsettings.json`:
 
 **Youssef Ahmedy** — .NET Full-Stack Web Developer
 
-[![GitHub](https://img.shields.io/badge/GitHub-YoussefAhmedy-0E0D0B?style=flat-square&logo=github)](https://github.com/YoussefAhmedy)
+[![GitHub](https://img.shields.io/badge/GitHub-YoussefAhmedy-1a2447?style=flat-square&logo=github)](https://github.com/YoussefAhmedy)
 [![Portfolio](https://img.shields.io/badge/Portfolio-youssefahmedy.vercel.app-4a6cf7?style=flat-square)](https://youssefahmedy.vercel.app/)
 
 ---
 
 <div align="center">
-  <sub>Robin Studio — Cairo · SS 2026 · Built with intent by Youssef Ahmedy</sub>
+  <sub>Built with ✦ pixel-perfect precision by Youssef Ahmedy</sub>
 </div>
